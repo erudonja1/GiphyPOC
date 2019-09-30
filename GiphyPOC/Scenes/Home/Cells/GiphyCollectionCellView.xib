@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KI7-L5-rxh" customClass="GiphyCollectionCell" customModule="GiphyPOC" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="blc-AI-Ca6">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="170"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozx-YZ-BkJ">
+                        <rect key="frame" x="0.0" y="170" width="200" height="30"/>
+                        <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="pYG-kD-WwJ">
+                        <rect key="frame" x="90" y="95" width="20" height="20"/>
+                    </activityIndicatorView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="blc-AI-Ca6" secondAttribute="bottom" constant="30" id="0XU-SW-BNj"/>
+                <constraint firstItem="blc-AI-Ca6" firstAttribute="leading" secondItem="KI7-L5-rxh" secondAttribute="leading" id="2Tm-r2-1Gz"/>
+                <constraint firstAttribute="bottom" secondItem="ozx-YZ-BkJ" secondAttribute="bottom" id="3sZ-LC-Db0"/>
+                <constraint firstAttribute="trailing" secondItem="blc-AI-Ca6" secondAttribute="trailing" id="DRa-pT-mtQ"/>
+                <constraint firstItem="ozx-YZ-BkJ" firstAttribute="leading" secondItem="KI7-L5-rxh" secondAttribute="leading" id="Rw7-Ds-i7f"/>
+                <constraint firstAttribute="trailing" secondItem="ozx-YZ-BkJ" secondAttribute="trailing" id="du3-pH-Kpg"/>
+                <constraint firstItem="pYG-kD-WwJ" firstAttribute="centerY" secondItem="eoH-I0-CRx" secondAttribute="centerY" id="gei-c1-rWs"/>
+                <constraint firstItem="ozx-YZ-BkJ" firstAttribute="top" secondItem="blc-AI-Ca6" secondAttribute="bottom" id="lbJ-yC-IJs"/>
+                <constraint firstItem="blc-AI-Ca6" firstAttribute="top" secondItem="KI7-L5-rxh" secondAttribute="top" id="sl6-GY-kkM"/>
+                <constraint firstItem="pYG-kD-WwJ" firstAttribute="centerX" secondItem="eoH-I0-CRx" secondAttribute="centerX" id="vd6-yH-4g4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="eoH-I0-CRx"/>
+            <size key="customSize" width="198" height="170"/>
+            <connections>
+                <outlet property="activityIndicatorView" destination="pYG-kD-WwJ" id="KRC-xg-O0q"/>
+                <outlet property="imageView" destination="blc-AI-Ca6" id="Aoc-fX-Mcb"/>
+                <outlet property="titleLabel" destination="ozx-YZ-BkJ" id="e7U-Bf-bIQ"/>
+            </connections>
+            <point key="canvasLocation" x="-23.188405797101453" y="-104.46428571428571"/>
+        </collectionViewCell>
+    </objects>
+</document>

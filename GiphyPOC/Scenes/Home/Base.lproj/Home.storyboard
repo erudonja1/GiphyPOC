@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="GiphyPOC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FZn-7h-zNs">
+                                <rect key="frame" x="0.0" y="124" width="414" height="730"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jFk-fu-Rqw">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="fqG-1e-PDY">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uzh-Yr-ilV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vl1-Tv-nee">
+                                        <rect key="frame" x="320" y="18" width="70" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="SBh-9P-UfL"/>
+                                            <constraint firstAttribute="width" constant="70" id="cgz-Di-I4n"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Search">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="05b-VJ-C0c"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Search by name, tag, whaever" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CG5-qs-EH8">
+                                        <rect key="frame" x="24" y="18" width="292" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="aM1-OZ-l4R"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="5db-bF-dox"/>
+                                    <constraint firstItem="vl1-Tv-nee" firstAttribute="centerY" secondItem="uzh-Yr-ilV" secondAttribute="centerY" id="MO8-IT-v3O"/>
+                                    <constraint firstAttribute="trailing" secondItem="vl1-Tv-nee" secondAttribute="trailing" constant="24" id="R5u-rs-a36"/>
+                                    <constraint firstItem="CG5-qs-EH8" firstAttribute="leading" secondItem="uzh-Yr-ilV" secondAttribute="leading" constant="24" id="bd5-M1-970"/>
+                                    <constraint firstItem="CG5-qs-EH8" firstAttribute="centerY" secondItem="uzh-Yr-ilV" secondAttribute="centerY" id="br5-s4-Hai"/>
+                                    <constraint firstItem="vl1-Tv-nee" firstAttribute="leading" secondItem="CG5-qs-EH8" secondAttribute="trailing" constant="4" id="xBd-yd-lS0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uzh-Yr-ilV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Ehq-Fl-dVL"/>
+                            <constraint firstItem="uzh-Yr-ilV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="W3a-du-v7P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FZn-7h-zNs" secondAttribute="trailing" id="qOH-tJ-6Qi"/>
+                            <constraint firstItem="FZn-7h-zNs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vbg-V0-YW8"/>
+                            <constraint firstItem="uzh-Yr-ilV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vdb-08-gSe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FZn-7h-zNs" secondAttribute="bottom" constant="8" id="vgz-fE-4g9"/>
+                            <constraint firstItem="FZn-7h-zNs" firstAttribute="top" secondItem="uzh-Yr-ilV" secondAttribute="bottom" id="yFU-Hd-B9d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="FZn-7h-zNs" id="an3-RC-unl"/>
+                        <outlet property="searchButton" destination="vl1-Tv-nee" id="al8-oU-Krm"/>
+                        <outlet property="searchTextField" destination="CG5-qs-EH8" id="5wc-Rt-tG7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+</document>
